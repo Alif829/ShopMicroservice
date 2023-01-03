@@ -1,0 +1,189 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - FrontEnd</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/FrontEnd.styles.css" asp-append-version="true" />
+    <!-- slider stylesheet -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="~/css/bootstrap.css" />
+
+    <!-- fonts style -->
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Dosis:400,600,700|Poppins:400,600,700&display=swap" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="~/css/style.css" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="~/css/responsive.css" rel="stylesheet" />
+</head>
+<body class="sub_page">
+    <header>
+        @*<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">FrontEnd</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>*@
+        <div class="hero_area">
+            <!-- header section strats -->
+            <div class="brand_box">
+                <a class="navbar-brand" href="#">
+                    <span>
+                        E-Fruit Shop
+                    </span>
+                </a>
+            </div>
+            <!-- end header section -->
+        </div>
+
+        <!-- nav section -->
+
+        <section class="nav_section">
+            <div class="container">
+                <div class="custom_nav2">
+                    <nav class="navbar navbar-expand custom_nav-container ">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <div class="d-flex  flex-column flex-lg-row align-items-center">
+                                <ul class="navbar-nav  ">
+                                    <li class="nav-item active">
+                                        <a class="nav-link" asp-controller="Home" asp-action="Index">Home <span class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" asp-controller="Home" asp-action="About">About </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" asp-controller="Home" asp-action="Fruit">Our Fruit </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" asp-controller="Home" asp-action="Review">Reviews</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" asp-controller="Home" asp-action="Contact">Contact Us</a>
+                                    </li>
+                                </ul>
+                                <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
+                                    <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
+                                </form>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </section>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <!-- info section -->
+
+    <section class="info_section layout_padding">
+        <div class="container">
+            <div class="info_logo">
+                <h2>
+                    E-Fruit Shop
+                </h2>
+            </div>
+            <div class="info_contact">
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="">
+                            <img src="~/images/location.png" alt="">
+                            <span>
+                                Passages of Lorem Ipsum available
+                            </span>
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="">
+                            <img src="~/images/call.png" alt="">
+                            <span>
+                                Call : +012334567890
+                            </span>
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="">
+                            <img src="~/images/mail.png" alt="">
+                            <span>
+                                demo@gmail.com
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 col-lg-9">
+                    <div class="info_form">
+                        <form action="">
+                            <input type="text" placeholder="Enter your email">
+                            <button>
+                                subscribe
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <div class="info_social">
+                        <div>
+                            <a href="">
+                                <img src="~/images/facebook-logo-button.png" alt="">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="">
+                                <img src="~/images/twitter-logo-button.png" alt="">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="">
+                                <img src="~/images/linkedin.png" alt="">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="">
+                                <img src="~/images/instagram.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <footer class="border-top footer text-muted" style="background-color:white">
+        <div class="container">
+            &copy; 2023 - FrontEnd - <a asp-area="" asp-controller="Home" asp-action="Home">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script type="text/javascript" src="~/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="~/js/bootstrap.js"></script>
+    <script type="text/javascript" src="~/js/custom.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
